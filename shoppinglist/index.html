@@ -1,0 +1,14 @@
+<!doctype html>  
+<html>  
+<head></head>  
+<body>
+<script type="text/javascript">  
+    var client = new Dropbox.Client({ key: 'km7bmsnxh8ylyy2'});
+client.authenticate(function () {
+    client.writeFile('hello.txt', 'Hello, World!', function () {
+        alert('File written!');
+    });
+});
+</script>  
+</body>  
+</html>  
