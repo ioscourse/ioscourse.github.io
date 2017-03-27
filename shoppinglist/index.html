@@ -1,9 +1,12 @@
 <!doctype html>  
 <html>  
-<head></head>  
+<head>
+<script src="//cdnjs.cloudflare.com/ajax/libs/dropbox.js/0.10.2/dropbox.min.js">
+</script>
+</head>  
 <body>
 <script type="text/javascript">  
-    var client = new Dropbox.Client({ key: 'km7bmsnxh8ylyy2'});
+var client = new Dropbox.Client({ key: "km7bmsnxh8ylyy2" });
 client.authenticate(function () {
     client.writeFile('hello.txt', 'Hello, World!', function () {
         alert('File written!');
